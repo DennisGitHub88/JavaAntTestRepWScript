@@ -10,7 +10,7 @@
 		<!-- ein Run-Task brauche ich auch. Auch ein Projekt muss in einen Ordner gebaut werden, den ich im SVN-Repository
 		anlegen muss und das wird dann aufgerufen und ausgeführt. Hier sollte ich dann die funktionalen Tests durchführen. -->
 		<java classname="testpaket.Demo">
-			<classpath path="staging" />
+			<classpath path="/usr/local/EasyJavaWsp/staging/" />
 		</java>
 	</target>
 	
