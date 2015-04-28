@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="compile" name="JavaCompileandRunwithAnt">
+	<!-- 2 Targets: 1. für Ausführung 2. für Compilierung -->
+	
+	<!-- Es reicht nur Task Run auszuführen. Der Rest klappt. -->
+	
+	<!-- run hängt von compile ab, compile muss also vor run passieren.
+		 default ist run. dieses ruft aber zuerst compile target auf -->
+	<target name="run">
+		<!-- ein Run-Task brauche ich auch. Auch ein Projekt muss in einen Ordner gebaut werden, den ich im SVN-Repository
+		anlegen muss und das wird dann aufgerufen und ausgeführt. Hier sollte ich dann die funktionalen Tests durchführen. -->
+		<java classname="testpaket.Demo">
+			<classpath path="staging" />
+		</java>
+	</target>
+	
+	<target name="compile">
+		<!-- in staging wird es "gebaut", diesen Ordner werde ich dann noch anlegen müssen oder? -->
+		<javac srcdir="./src" destdir="staging" />
+		<echo>Compile was successful</echo>
+	</target>
+</project>
